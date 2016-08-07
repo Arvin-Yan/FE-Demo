@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>单页多轮播+Ajax+瀑布流</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css" >
+    </head>
+    <body>
+    <div class="container clearfix">
+        <div class="ct carousel">
+        <ul class="img-show">
+            <li><a href="#"><img src="./img/1.jpg"></a></li>
+            <li><a href="#"><img src="./img/2.jpg"></a></li>
+            <li><a href="#"><img src="./img/3.jpg"></a></li>
+            <li><a href="#"><img src="./img/4.jpg"></a></li>
+        </ul>
+        <a class="pre arrow"><</a>
+        <a class="next arrow">></a>
+        <ul class="bullet">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+        <div class="ct carousel">
+            <ul class="img-show">
+                <li><a href="#"><img src="./img/1.jpg"></a></li>
+                <li><a href="#"><img src="./img/2.jpg"></a></li>
+                <li><a href="#"><img src="./img/3.jpg"></a></li>
+                <li><a href="#"><img src="./img/4.jpg"></a></li>
+            </ul>
+            <a class="pre arrow"><</a>
+            <a class="next arrow">></a>
+            <ul class="bullet">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="ct carousel">
+            <ul class="img-show">
+                <li><a href="#"><img src="./img/1.jpg"></a></li>
+                <li><a href="#"><img src="./img/2.jpg"></a></li>
+                <li><a href="#"><img src="./img/3.jpg"></a></li>
+                <li><a href="#"><img src="./img/4.jpg"></a></li>
+            </ul>
+            <a class="pre arrow"><</a>
+            <a class="next arrow">></a>
+            <ul class="bullet">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="loadmore" class="container">
+        <ul id="items-ct" class="clearfix">
+            <li class="item hide"></li>
+        </ul>
+        <div id="load"></div>
+    </div>
+    <script  data-main="js/main" src="js/lib/require.js"></script>
+    </body>
+</html>

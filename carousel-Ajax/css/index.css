@@ -1,0 +1,149 @@
+html,ul,li{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 980px;
+    margin: 10px auto;
+}
+.ct{
+    float: left;
+    position: relative;
+    width: 284px;
+    height: 220px;
+    overflow: hidden;
+    margin: 10px;
+    border:1px solid #ccc;
+}
+.ct .img-show{
+    position: absolute;
+}
+.ct .img-show img{
+    width: 284px;
+    height: 220px;
+}
+.ct .img-show li{
+    float: left;
+}
+.img-show:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+.arrow{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    text-align: center;
+    border-radius: 15px;
+    color:#FFF;
+    background-color:  #666;
+    opacity: 0.8;
+}
+.arrow:hover{
+    opacity: 1
+}
+.pre{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+.bullet{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.bullet li{
+    display: inline-block;
+    width: 16px;
+    height: 4px;
+    background: #aaa;
+    border-radius: 3px;
+    cursor:pointer;
+}
+.bullet li.active{
+    background: green;
+}
+
+/*load*/
+html,body,ul,li,p,div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+#loadmore{
+    margin-top: 20px;
+    position: relative;
+}
+#load{
+    width: 900px;
+    margin: 0 auto;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#load #items-ct{
+    position: relative;
+}
+#items-ct .item{
+    position: absolute;
+    padding-right: 10px;
+    width: 284px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 8px #666;
+    opacity: 0;
+    transition: all .8s;
+}
+#items-ct .item img{
+    width: 260px;
+    margin: 10px;
+}
+#items-ct .desp{
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 10px 15px 0;
+    color: #777371;
+}
+#items-ct .item .header{
+    height: 25px;
+    margin: 0 12px;
+    border-bottom: 1px solid #DBDBDB;
+}
+#load{
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid rgba(200, 200, 200, 0.5);
+    border-right: 5px solid rgba(200, 200, 200, 0.5);
+    border-bottom: 5px solid rgba(200, 200, 200, 0.5);
+    border-left: 5px solid #bbb;
+    border-radius:50%;
+    animation:loading 1.2s infinite linear;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hide{
+    display: none;
+}
