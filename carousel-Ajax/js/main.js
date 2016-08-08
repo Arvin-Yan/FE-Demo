@@ -5,11 +5,11 @@ require.config({
     }
 })
 define(function(require){
-    require(['jquery', 'carousel', 'loadmore'], function($, carousel, loadmore){
+    require(['jquery', 'carousel', 'loadmore', 'goTop'], function($, carousel, loadmore, goTop){
         $('.carousel').each(function(){
             new carousel($(this));
         });
         loadmore();
-
+        goTop.init();
     })
 })
