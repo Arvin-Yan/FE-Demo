@@ -106,7 +106,7 @@ $('#modal1').on("click",function(){
 });
 $('#modal2').on('click', function() {
     var dialog2 = new Dialog();
-    dialog2.open('<a href="http://jirengu.com">在线简历</a>');
+    dialog2.open('<a target="_blank" href="http://yankewen.applinzi.com/resume/">在线简历</a>');
 });
 
 $('#modal3').on('click', function() {
