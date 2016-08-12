@@ -136,7 +136,7 @@ $('#modal5').on('click', function() {
     var dialog5 = new Dialog();
     dialog5.open({
         title: '欢迎下次再来',
-        message: '真切希望能有一次面试机会',
+        message: '我可以来参加面试么^_^',
         confirmBtn: true,
         closeBtn: false,
         onConfirm: function() {
