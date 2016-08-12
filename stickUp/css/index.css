@@ -1,0 +1,34 @@
+.ct{
+	width: 900px;
+	margin:0 auto;
+}
+.header{
+	height: 60px;
+	background: red;
+}
+.nav{
+	height: 40px;
+	margin-top: 10px;
+	background: blue;
+}
+.content{
+	height: 800px;
+	background: #ccc;
+	padding: 10px;
+	overflow: auto;
+}
+.content .aside{
+	width: 120px;
+	height: 400px;
+	background: green;
+	float: left;
+}
+.content .main{
+	background: #fff;
+	height: 800px;
+	overflow: auto;
+}
+.footer{
+	background-color: #333;
+	margin-top: 
+}
