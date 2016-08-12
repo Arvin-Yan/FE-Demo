@@ -1,0 +1,103 @@
+ul,li{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.clearfix:after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+
+.ct {
+	position: relative;
+	margin:10px;
+}
+.ct .tabs{
+	float: left;
+	border:1px solid #ccc;
+	border-bottom: none;
+	border-radius: 3px 3px 0 0;
+}
+.ct .tabs li a{
+	text-decoration: none;
+	color: #000;
+	border-right: 1px solid #ccc;
+	padding: 0 10px;
+	font-size: 12px;
+}
+.ct .tabs >li{
+	float: left;
+	padding: 10px 0;
+
+}
+.ct .tabs li.active{
+	background: #ccc;
+}
+.ct .tabs li.active a{
+	color: #c81623;
+}
+.ct .tabs li:last-child a{
+	border:none;
+}
+.ct .list{
+	width: 766px;
+	border: 1px solid	#ccc;
+}
+.product{
+    position: relative;
+    float: left;
+    width: 200px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    background: #fff;
+}
+.ct .ct-prod{
+	margin-left: -20px;
+	margin-top: -20px;
+}
+ul:after{
+	content: '';
+	display: block;
+	clear:both;
+}
+.ct .panel{
+	display: none;
+}
+.ct .panel.active{
+	display: block;
+}
+
+.product .cover{
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0, 0.3);
+	opacity: 0；
+}
+.product .cover .btn{
+	position: absolute;
+	display: block;
+	text-decoration: none;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	border-radius: 2px;
+	color: red;
+	background: white;
+	transform: translate(-50%,-50%);
+	border: 1px solid red;
+	opacity: 1;
+}
+.product .price{
+	color: red;
+}
