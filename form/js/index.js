@@ -36,15 +36,13 @@ var usernameIpt = document.getElementById('username');
 							msgUn.innerText = "用户名被注册了";
 					},
 					error:function(){
-						console.log("cuowu");
+						console.log("系统繁忙，请稍等");
 					}
 				})
 			}else {
 				msgUn.innerText = "用户名格式错误";
 			}
 		};
-
-
 
 		function isLegalPassword(str){
 		    if(str.length < 6 || str.length > 15){
@@ -63,7 +61,10 @@ var usernameIpt = document.getElementById('username');
 		};
 		function isLegalName() {
 			var username = usernameIpt.value;
-			return /\w{3,10}/.test(username);
+			if(/^\w{3,10}$/g.test(username)){
+				if(!/[^A-Za-z_0-9]/.test(username))
+					return true;
+			}
 		};
 		function testPaswd1() {
 			var pwd = pasw1Ipt.value;

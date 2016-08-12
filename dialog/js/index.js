@@ -135,8 +135,8 @@ $('#modal4').on('click', function() {
 $('#modal5').on('click', function() {
     var dialog5 = new Dialog();
     dialog5.open({
-        title: '欢迎下次再来',
-        message: '我可以来参加面试么^_^',
+        title: '欢迎联系我',
+        message: '为了面试，我已经用了洪荒之力^_^',
         confirmBtn: true,
         closeBtn: false,
         onConfirm: function() {
