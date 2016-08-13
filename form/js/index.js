@@ -1,10 +1,11 @@
-var usernameIpt = document.getElementById('username');
-			msgUn = document.querySelector('.msg-un');
-			pasw1Ipt = document.getElementById('pasw1');
-			msgPwd1 = document.querySelector('.msg-pwd1');
-			msgPwd2 = document.querySelector('.msg-pwd2');
-			pasw2Ipt = document.getElementById('pasw2');
-			btnReg = document.getElementById('btn-register');
+var usernameIpt = document.getElementById('username'),
+			msgUn = document.querySelector('.msg-un'),
+			pasw1Ipt = document.getElementById('pasw1'),
+			msgPwd1 = document.querySelector('.msg-pwd1'),
+			msgPwd2 = document.querySelector('.msg-pwd2'),
+			pasw2Ipt = document.getElementById('pasw2'),
+			btnReg = document.getElementById('btn-register'),
+			unuse;
 		usernameIpt.addEventListener('change', function(){
     		testUnserName();
         });
@@ -15,7 +16,7 @@ var usernameIpt = document.getElementById('username');
 			testPaswd2();
 		})
 		btnReg.addEventListener('click',function() {
-			if (isLegalName()&&testPaswd1()&&testPaswd2()) {
+			if (unuse && isLegalName()&&testPaswd1()&&testPaswd2()) {
 				alert("注册成功！");
 			}else {
 				alert("请检查用户名和密码，再注册");
@@ -30,10 +31,15 @@ var usernameIpt = document.getElementById('username');
 						username:usernameIpt.value
 					},
 					success: function(ret){
-						if(ret.status)
+						if(ret.status){
 							msgUn.innerText = "用户名可用";
-						else
+							unuse =  true;
+						}
+						else{
 							msgUn.innerText = "用户名被注册了";
+							unuse = false;
+						}
+
 					},
 					error:function(){
 						console.log("系统繁忙，请稍等");
@@ -73,7 +79,7 @@ var usernameIpt = document.getElementById('username');
 				return true;
 			}else {
 				msgPwd1.innerText = '密码格式不对';
-				
+
 				return false;
 			}
 		};
@@ -108,7 +114,7 @@ var usernameIpt = document.getElementById('username');
 		}
 		if (obj.type.toLowerCase() == 'post') {
 			xmlhttp.open(obj.type, obj.url);
-			xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');	
+			xmlhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
 			xmlhttp.send(dataStr);
 		}
 	}
